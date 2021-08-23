@@ -30,7 +30,7 @@ namespace MinimalExample
 				// and when it is created clientside it creates the actual
 				// UI panels. You don't have to create your HUD via an entity,
 				// this just feels like a nice neat way to do it.
-				new HudEntity();
+				new MinimalHudEntity();
 			}
 
 			if ( IsClient )
@@ -46,7 +46,7 @@ namespace MinimalExample
 		{
 			base.ClientJoined( client );
 
-			var player = new Player();
+			var player = new MinimalPlayer();
 			client.Pawn = player;
 
 			player.Respawn();

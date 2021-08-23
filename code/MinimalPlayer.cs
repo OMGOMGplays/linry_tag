@@ -2,13 +2,13 @@
 using System;
 using System.Linq;
 
-namespace Example
+namespace MinimalExample
 {
-	partial class Player : Player
+	partial class MinimalPlayer : Player
 	{
 		public override void Respawn()
 		{
-			SetModel( "models/citizen/linry.vmdl" );
+			SetModel( "models/citizen/citizen.vmdl" );
 
 			//
 			// Use WalkController for movement (you can make your own PlayerController for 100% control)
