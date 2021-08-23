@@ -18,9 +18,9 @@ namespace MinimalExample
 	/// You can use this to create things like HUDs and declare which player class
 	/// to use for spawned players.
 	/// </summary>
-	public partial class MinimalGame : Sandbox.Game
+	public partial class LinryTag : Sandbox.Game
 	{
-		public MinimalGame()
+		public LinryTag()
 		{
 			if ( IsServer )
 			{
@@ -46,7 +46,7 @@ namespace MinimalExample
 		{
 			base.ClientJoined( client );
 
-			var player = new MinimalPlayer();
+			var player = new SandboxPlayer();
 			client.Pawn = player;
 
 			player.Respawn();
