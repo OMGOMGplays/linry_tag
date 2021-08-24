@@ -7,11 +7,9 @@ partial class SandboxPlayer : Player
 
 	private DamageInfo lastDamage;
 
-	[Net] public PawnController VehicleController { get; set; }
-	[Net] public PawnAnimator VehicleAnimator { get; set; }
-	[Net, Predicted] public ICamera VehicleCamera { get; set; }
-	[Net, Predicted] public Entity Vehicle { get; set; }
 	[Net, Predicted] public ICamera MainCamera { get; set; }
+
+	float Randomizer = Rand.Float(1.0f, 3.0f);
 
 	public ICamera LastCamera { get; set; }
 
@@ -23,13 +21,21 @@ partial class SandboxPlayer : Player
 	{
 		MainCamera = new FirstPersonCamera();
 		LastCamera = MainCamera;
-
 		base.Spawn();
 	}
 
 	public override void Respawn()
 	{
-		SetModel( "models/citizen/linry.vmdl" );
+		if (Randomizer <= 2.0f) 
+		{
+			SetModel( "models/citizen/linry.vmdl" );
+		}
+
+		if (Randomizer > 2.0f) 
+		{
+			SetModel("models/citizen/citizen.vmdl");
+			Dress();
+		}
 
 		Controller = new WalkController();
 		Animator = new StandardPlayerAnimator();
@@ -53,18 +59,6 @@ partial class SandboxPlayer : Player
 	public override void OnKilled()
 	{
 		base.OnKilled();
-
-		if ( lastDamage.Flags.HasFlag( DamageFlags.Vehicle ) )
-		{
-			Particles.Create( "particles/impact.flesh.bloodpuff-big.vpcf", lastDamage.Position );
-			Particles.Create( "particles/impact.flesh-big.vpcf", lastDamage.Position );
-			PlaySound( "kersplat" );
-		}
-
-		VehicleController = null;
-		VehicleAnimator = null;
-		VehicleCamera = null;
-		Vehicle = null;
 
 		BecomeRagdollOnClient( Velocity, lastDamage.Flags, lastDamage.Position, lastDamage.Force, GetHitboxBone( lastDamage.HitboxIndex ) );
 		LastCamera = MainCamera;
@@ -100,7 +94,6 @@ partial class SandboxPlayer : Player
 
 	public override PawnController GetActiveController()
 	{
-		if ( VehicleController != null ) return VehicleController;
 		if ( DevController != null ) return DevController;
 
 		return base.GetActiveController();
@@ -108,15 +101,11 @@ partial class SandboxPlayer : Player
 
 	public override PawnAnimator GetActiveAnimator()
 	{
-		if ( VehicleAnimator != null ) return VehicleAnimator;
-
 		return base.GetActiveAnimator();
 	}
 
 	public ICamera GetActiveCamera()
 	{
-		if ( VehicleCamera != null ) return VehicleCamera;
-
 		return MainCamera;
 	}
 
@@ -131,11 +120,6 @@ partial class SandboxPlayer : Player
 
 		if ( LifeState != LifeState.Alive )
 			return;
-
-		if ( VehicleController != null && DevController is NoclipController )
-		{
-			DevController = null;
-		}
 
 		var controller = GetActiveController();
 		if ( controller != null )
