@@ -174,7 +174,6 @@ partial class SandboxPlayer : Player
 		{
 			if ( timeSinceJumpReleased < 0.3f )
 			{
-				Game.Current?.DoPlayerNoclip( cl );
 			}
 
 			timeSinceJumpReleased = 0;
