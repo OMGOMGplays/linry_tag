@@ -1,4 +1,4 @@
-﻿
+﻿using LT.UI;
 using Sandbox;
 using Sandbox.UI.Construct;
 using System;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 //
 // You don't need to put things in a namespace, but it doesn't hurt.
 //
-namespace MinimalExample
+namespace LT
 {
 
 	/// <summary>
@@ -18,7 +18,7 @@ namespace MinimalExample
 	/// You can use this to create things like HUDs and declare which player class
 	/// to use for spawned players.
 	/// </summary>
-	public partial class LinryTag : Sandbox.Game
+	public partial class LinryTag : Game
 	{
 		public LinryTag()
 		{
@@ -30,7 +30,7 @@ namespace MinimalExample
 				// and when it is created clientside it creates the actual
 				// UI panels. You don't have to create your HUD via an entity,
 				// this just feels like a nice neat way to do it.
-				new SandboxHud();
+				new LTHud();
 			}
 
 			if ( IsClient )
@@ -46,7 +46,7 @@ namespace MinimalExample
 		{
 			base.ClientJoined( client );
 
-			var player = new SandboxPlayer();
+			var player = new LTPlayer();
 			client.Pawn = player;
 
 			player.Respawn();

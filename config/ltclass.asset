@@ -1,0 +1,100 @@
+//
+// Sandbox.ICamera
+//
+@struct = Sandbox_ICamera
+[
+	classinfo(struct:Sandbox_LibraryAttribute) : "Class Info" :  : ""
+]
+
+//
+// Sandbox.LibraryAttribute
+//
+@struct = Sandbox_LibraryAttribute
+[
+	alias(array:string) : "Alias" :  : ""
+	class(struct:System_Type) : "Class" :  : ""
+	assembly(struct:System_Reflection_Assembly) : "Assembly" :  : ""
+	typeinfo(struct:System_Reflection_TypeInfo) : "Type Info" :  : ""
+	name(string) : "Name" :  : ""
+	identifier(integer) : "Identifier" : 0 : ""
+	fullname(string) : "Full Name" :  : ""
+	title(string) : "Title" :  : ""
+	description(string) : "Description" :  : ""
+	icon(string) : "Icon" :  : ""
+	group(string) : "Group" :  : ""
+	editable(boolean) : "Editable" : 0 : ""
+	spawnable(boolean) : "Spawnable" : 0 : ""
+	propertiesinternal(struct:System_Collections_Generic_Dictionary`2[[System_String, System_Private_CoreLib, Version=6_0_0_0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Sandbox_PropertyAttribute, Sandbox_System, Version=1_0_1_0, Culture=neutral, PublicKeyToken=null]]) : "Properties Internal" :  : ""
+	propertieslist(array:struct:Sandbox_PropertyAttribute) : "Properties List" :  : ""
+]
+
+//
+// System.Type
+//
+@struct = System_Type
+[
+]
+
+//
+// System.Reflection.Assembly
+//
+@struct = System_Reflection_Assembly
+[
+]
+
+//
+// System.Reflection.TypeInfo
+//
+@struct = System_Reflection_TypeInfo
+[
+]
+
+//
+// System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Sandbox.PropertyAttribute, Sandbox.System, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]
+//
+@struct = System_Collections_Generic_Dictionary`2[[System_String, System_Private_CoreLib, Version=6_0_0_0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Sandbox_PropertyAttribute, Sandbox_System, Version=1_0_1_0, Culture=neutral, PublicKeyToken=null]]
+[
+	item(struct:Sandbox_PropertyAttribute) : "Item" :  : ""
+	system.collections.idictionary.item(struct:System_Object) : "System Collections Idictionary Item" :  : ""
+]
+
+//
+// Sandbox.PropertyAttribute
+//
+@struct = Sandbox_PropertyAttribute
+[
+	name(string) : "Name" :  : ""
+	title(string) : "Title" :  : ""
+	help(string) : "Help" :  : ""
+	attributesinternal(array:struct:System_Attribute) : "Attributes Internal" :  : ""
+]
+
+//
+// System.Attribute
+//
+@struct = System_Attribute
+[
+]
+
+//
+// System.Object
+//
+@struct = System_Object
+[
+]
+
+//
+// LT.PlayerClass
+//
+@BaseClass = ltclass : ""
+[
+	title(string) : "Title" :  : ""
+	maxhealth(float) : "Max Health" : 0 : ""
+	maxspeed(float) : "Max Speed" : 0 : ""
+	crouchspeed(float) : "Crouch Speed" : 0 : ""
+	eyeheight(float) : "Eye Height" : 75 : ""
+	camera(struct:Sandbox_ICamera) : "Camera" :  : ""
+	model(studio) { group = "Models" } : "Model" :  : ""
+	hands(studio) { group = "Models" } : "Hands" :  : ""
+]
+

@@ -148,6 +148,39 @@
 									},
 								]
 							},
+							{
+								_class = "AnimConstraintParent"
+								note = "experiment"
+								children = 
+								[
+									{
+										_class = "AnimConstraintBoneInput"
+										parent_bone = "arm_lower_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 0.0
+									},
+									{
+										_class = "AnimConstraintAttachmentInput"
+										parent_attachment = "ElbowR_final"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = 1.0
+									},
+									{
+										_class = "AnimConstraintSlave"
+										parent_bone = "arm_elbow_helper_R"
+										relative_origin = [ 0.0, 0.0, 0.0 ]
+										relative_angles = [ 0.0, 0.0, 0.0 ]
+										weight = -1.0
+									},
+								]
+								disabled = true
+								constrained_bone = "arm_elbow_helper_R"
+								weight = 1.0
+								translation_offset = [ 0.0, 0.0, 0.0 ]
+								rotation_offset_xyz = [ 0.0, 0.0, 0.0 ]
+							},
 						]
 					},
 					{
@@ -764,26 +797,6 @@
 						[
 							{
 								_class = "AnimFile"
-								name = "debug_twist_wrists"
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = true
-								anim_markup_ordered = false
-								disable_compression = false
-								source_filename = "models/citizen/animations/debug/debug_twist_wrists.fbx"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
 								name = "debug_twist_constraints"
 								activity_name = ""
 								activity_weight = 1
@@ -800,6 +813,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -820,6 +834,28 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "debug_twist_wrists"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = true
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/debug/debug_twist_wrists.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -840,6 +876,28 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "debug_stretchy_limbs"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/debug/debug_stretchy_limbs.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -860,6 +918,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -888,6 +947,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 						]
@@ -915,6 +975,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -935,6 +996,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 								anim_hold_list = 
 								[
@@ -962,6 +1024,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -990,6 +1053,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -997,7 +1061,7 @@
 								name = "Expressions_Attacking"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = ""
+								weight_list_name = "Only_Morphs"
 								fade_in_time = 0.2
 								fade_out_time = 0.2
 								looping = false
@@ -1010,6 +1074,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1017,7 +1082,7 @@
 								name = "Expressions_IdleNoiseLayer"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = ""
+								weight_list_name = "Only_Morphs"
 								fade_in_time = 0.2
 								fade_out_time = 0.2
 								looping = true
@@ -1030,6 +1095,28 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = 5.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "Expressions_IdleNoiseLayer_02"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Only_Morphs"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/face/Citizen@Expressions_IdleNoiseLayer_02.dmx"
+								start_frame = -1
+								end_frame = -1
+								framerate = 5.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1037,7 +1124,7 @@
 								name = "Expressions_Panic"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = ""
+								weight_list_name = "Only_Morphs"
 								fade_in_time = 0.2
 								fade_out_time = 0.2
 								looping = false
@@ -1050,6 +1137,28 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "Expressions_Voice"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "Only_Morphs_Mouth"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/face/Citizen@Expressions_Voice.dmx"
+								start_frame = -1
+								end_frame = 1
+								framerate = 1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1057,7 +1166,7 @@
 								name = "FacialFidget_01"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = ""
+								weight_list_name = "Only_Morphs"
 								fade_in_time = 0.2
 								fade_out_time = 0.2
 								looping = false
@@ -1070,6 +1179,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1077,7 +1187,7 @@
 								name = "FacialFidget_02"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = ""
+								weight_list_name = "Only_Morphs"
 								fade_in_time = 0.2
 								fade_out_time = 0.2
 								looping = false
@@ -1090,6 +1200,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1097,7 +1208,7 @@
 								name = "FacialFidget_03"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = ""
+								weight_list_name = "Only_Morphs"
 								fade_in_time = 0.2
 								fade_out_time = 0.2
 								looping = false
@@ -1110,6 +1221,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1117,7 +1229,7 @@
 								name = "FacialFidget_04"
 								activity_name = ""
 								activity_weight = 1
-								weight_list_name = ""
+								weight_list_name = "Only_Morphs"
 								fade_in_time = 0.2
 								fade_out_time = 0.2
 								looping = false
@@ -1130,6 +1242,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 						]
@@ -1206,6 +1319,7 @@
 								start_frame = 3
 								end_frame = 354
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 						]
@@ -1233,6 +1347,158 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "Menu"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "IdleMenu_Exit"
+								children = 
+								[
+									{
+										_class = "AnimAddLayer"
+										anim_name = "Expressions_Panic"
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/Citizen@IdleMenu_Exit.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "IdleMenu_Exit_In_delta"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "IdleMenu_Exit_In_delta"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/Citizen@IdleMenu_Exit_In.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "IdleMenu_Exit_Out_delta"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "IdleMenu_Exit_Out_delta"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/Citizen@IdleMenu_Exit_Out.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "IdleMenu_Exit_Fidget_01_delta"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "IdleMenu_Exit_Fidget_01_delta"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/Citizen@IdleMenu_Exit_Fidget_01.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "IdleMenu_Exit_Fidget_02_delta"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "IdleMenu_Exit_Fidget_02_delta"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								source_filename = "models/citizen/animations/Citizen@IdleMenu_Exit_Fidget_02.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 						]
@@ -1260,6 +1526,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1288,6 +1555,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1308,6 +1576,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 							{
@@ -1336,6 +1605,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 						]
@@ -1345,6 +1615,432 @@
 						name = "Movement"
 						children = 
 						[
+							{
+								_class = "Folder"
+								name = "Airborne"
+								children = 
+								[
+									{
+										_class = "AnimFile"
+										name = "Airborne_Flail_Up_delta"
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 2
+												frames_from_end = 2
+											},
+											{
+												_class = "AnimSubtract"
+												anim_name = "Airborne_Up"
+												frame = 0
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/citizen@airborne_flail_up.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_Flail_Neutral_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "IdlePose_Default"
+												frame = 0
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/citizen@airborne_flail_neutral.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_Flail_Down_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "IdlePose_Default"
+												frame = 0
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/citizen@airborne_flail_down.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_C"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Airborne_C.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_L"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Airborne_L.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_R"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Airborne_R.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_Down_C"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Airborne_Down_C.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_Down_L"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Airborne_Down_L.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_Down_R"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Airborne_Down_R.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Airborne_Up"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Airborne_Up.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Jump"
+										note = "Sped up in ModelDoc from 30fps"
+										children = 
+										[
+											{
+												_class = "AnimEvent"
+												event_class = "AE_FOOTSTEP"
+												event_frame = 1
+												event_keys = 
+												{
+													Attachment = "foot_R"
+													Foot = "1"
+													Volume = 0.7
+												}
+											},
+											{
+												_class = "AnimEvent"
+												event_class = "AE_FOOTSTEP"
+												event_frame = 13
+												event_keys = 
+												{
+													Attachment = "foot_L"
+													Foot = "0"
+													Volume = 0.7
+												}
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Jump.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = 36.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Falling"
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 40
+												frames_from_end = 40
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Falling.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Land"
+										note = "Feet IK excluded through weightlist"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												disabled = true
+												anim_name = "Land"
+												frame = 0
+											},
+											{
+												_class = "AnimEvent"
+												event_class = "AE_FOOTSTEP"
+												event_frame = 1
+												event_keys = 
+												{
+													Attachment = "foot_L"
+													Foot = "0"
+													Volume = 0.7
+												}
+											},
+											{
+												_class = "AnimEvent"
+												event_class = "AE_FOOTSTEP"
+												event_frame = 2
+												event_keys = 
+												{
+													Attachment = "foot_R"
+													Foot = "1"
+													Volume = 0.7
+												}
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = "Exclude_Foot_IK"
+										fade_in_time = 0.05
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Land.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Land_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Land"
+												frame = 0
+											},
+											{
+												_class = "AnimEvent"
+												event_class = "AE_FOOTSTEP"
+												event_frame = 1
+												event_keys = 
+												{
+													Attachment = "foot_L"
+													Foot = "0"
+													Volume = 0.7
+												}
+											},
+											{
+												_class = "AnimEvent"
+												event_class = "AE_FOOTSTEP"
+												event_frame = 2
+												event_keys = 
+												{
+													Attachment = "foot_R"
+													Foot = "1"
+													Volume = 0.7
+												}
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.05
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Land.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+								]
+							},
 							{
 								_class = "Folder"
 								name = "Walk"
@@ -1467,6 +2163,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1494,6 +2191,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1521,6 +2219,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1548,6 +2247,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1575,6 +2275,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1602,6 +2303,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1629,6 +2331,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1656,6 +2359,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -1782,6 +2486,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1809,6 +2514,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1836,6 +2542,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1863,6 +2570,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1890,6 +2598,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1917,6 +2626,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1944,6 +2654,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -1971,6 +2682,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -2099,6 +2811,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2126,6 +2839,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2153,6 +2867,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2180,6 +2895,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2207,6 +2923,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2234,6 +2951,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2261,6 +2979,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2288,6 +3007,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 50.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -2407,6 +3127,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2434,6 +3155,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2461,6 +3183,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2488,6 +3211,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2515,6 +3239,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2542,6 +3267,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2569,6 +3295,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2596,6 +3323,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2623,6 +3351,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -2742,6 +3471,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2769,6 +3499,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2796,6 +3527,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2823,6 +3555,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2850,6 +3583,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2877,6 +3611,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2904,6 +3639,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2931,6 +3667,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -2958,6 +3695,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -3040,6 +3778,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 25.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3068,6 +3807,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 25.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3088,6 +3828,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3108,6 +3849,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3128,6 +3870,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3148,6 +3891,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3168,6 +3912,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3188,6 +3933,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3208,6 +3954,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3228,6 +3975,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3248,6 +3996,98 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+								]
+							},
+							{
+								_class = "Folder"
+								name = "Skid"
+								children = 
+								[
+									{
+										_class = "AnimFile"
+										name = "Skid_E"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Skid_E.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Skid_N"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Skid_N.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Skid_S"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Skid_S.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Skid_W"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/Citizen@Skid_W.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -3283,6 +4123,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 60.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3311,190 +4152,10 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = 45.0
+										take = 0
 										reverse = false
 									},
 								]
-							},
-							{
-								_class = "AnimFile"
-								name = "Jump"
-								children = 
-								[
-									{
-										_class = "AnimEvent"
-										event_class = "AE_FOOTSTEP"
-										event_frame = 1
-										event_keys = 
-										{
-											Attachment = "foot_R"
-											Foot = "1"
-											Volume = 0.7
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_FOOTSTEP"
-										event_frame = 13
-										event_keys = 
-										{
-											Attachment = "foot_L"
-											Foot = "0"
-											Volume = 0.7
-										}
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								source_filename = "models/citizen/animations/Citizen@Jump.fbx"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								reverse = false
-								anim_hold_list = 
-								[
-									{
-										frame = 0
-										frame_count = 0
-									},
-								]
-							},
-							{
-								_class = "AnimFile"
-								name = "Falling"
-								children = 
-								[
-									{
-										_class = "AnimSmoothLoop"
-										frames_from_start = 40
-										frames_from_end = 40
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = true
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								source_filename = "models/citizen/animations/Citizen@Falling.fbx"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "Land"
-								children = 
-								[
-									{
-										_class = "AnimSubtract"
-										disabled = true
-										anim_name = "Land"
-										frame = 0
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_FOOTSTEP"
-										event_frame = 1
-										event_keys = 
-										{
-											Attachment = "foot_L"
-											Foot = "0"
-											Volume = 0.7
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_FOOTSTEP"
-										event_frame = 2
-										event_keys = 
-										{
-											Attachment = "foot_R"
-											Foot = "1"
-											Volume = 0.7
-										}
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.05
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								source_filename = "models/citizen/animations/Citizen@Land.fbx"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "Land_delta"
-								children = 
-								[
-									{
-										_class = "AnimSubtract"
-										anim_name = "Land"
-										frame = 0
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_FOOTSTEP"
-										event_frame = 1
-										event_keys = 
-										{
-											Attachment = "foot_L"
-											Foot = "0"
-											Volume = 0.7
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_FOOTSTEP"
-										event_frame = 2
-										event_keys = 
-										{
-											Attachment = "foot_R"
-											Foot = "1"
-											Volume = 0.7
-										}
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.05
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								source_filename = "models/citizen/animations/Citizen@Land.fbx"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								reverse = false
 							},
 						]
 					},
@@ -3521,6 +4182,7 @@
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
+								take = 0
 								reverse = false
 							},
 						]
@@ -3535,6 +4197,135 @@
 								name = "Pistol"
 								children = 
 								[
+									{
+										_class = "AnimFile"
+										name = "Pistol_2H_Aim_Standing_01"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Pistol_2H_Aim_Standing_01"
+												frame = 4
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Aim_Standing_01.fbx"
+										start_frame = 1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_2H_Attack_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.01
+										fade_out_time = 0.1
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Attack_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = 40.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_2H_Attack_01_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Pistol_2H_Attack_01"
+												frame = 0
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.01
+										fade_out_time = 0.1
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Attack_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = 40.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_2H_Draw_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Draw_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_2H_Draw_01_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Pistol_2H_Draw_01"
+												frame = 25
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Draw_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
 									{
 										_class = "AnimFile"
 										name = "Pistol_2H_Pose_Standing_01"
@@ -3553,6 +4344,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3573,6 +4365,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3593,6 +4386,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3631,6 +4425,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3669,130 +4464,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
-										reverse = false
-									},
-									{
-										_class = "AnimFile"
-										name = "Pistol_2H_Attack_01"
-										activity_name = ""
-										activity_weight = 1
-										weight_list_name = ""
-										fade_in_time = 0.01
-										fade_out_time = 0.1
-										looping = false
-										delta = false
-										worldSpace = false
-										hidden = false
-										anim_markup_ordered = false
-										disable_compression = false
-										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Attack_01.fbx"
-										start_frame = -1
-										end_frame = -1
-										framerate = 40.0
-										reverse = false
-									},
-									{
-										_class = "AnimFile"
-										name = "Pistol_2H_Attack_01_delta"
-										children = 
-										[
-											{
-												_class = "AnimSubtract"
-												anim_name = "Pistol_2H_Attack_01"
-												frame = 0
-											},
-										]
-										activity_name = ""
-										activity_weight = 1
-										weight_list_name = ""
-										fade_in_time = 0.01
-										fade_out_time = 0.1
-										looping = false
-										delta = false
-										worldSpace = false
-										hidden = false
-										anim_markup_ordered = false
-										disable_compression = false
-										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Attack_01.fbx"
-										start_frame = -1
-										end_frame = -1
-										framerate = 40.0
-										reverse = false
-									},
-									{
-										_class = "AnimFile"
-										name = "Pistol_2H_Aim_Standing_01"
-										children = 
-										[
-											{
-												_class = "AnimSubtract"
-												anim_name = "Pistol_2H_Aim_Standing_01"
-												frame = 4
-											},
-										]
-										activity_name = ""
-										activity_weight = 1
-										weight_list_name = ""
-										fade_in_time = 0.2
-										fade_out_time = 0.2
-										looping = false
-										delta = false
-										worldSpace = false
-										hidden = false
-										anim_markup_ordered = false
-										disable_compression = false
-										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Aim_Standing_01.fbx"
-										start_frame = 1
-										end_frame = -1
-										framerate = -1.0
-										reverse = false
-									},
-									{
-										_class = "AnimFile"
-										name = "Pistol_2H_Draw"
-										activity_name = ""
-										activity_weight = 1
-										weight_list_name = ""
-										fade_in_time = 0.2
-										fade_out_time = 0.2
-										looping = false
-										delta = false
-										worldSpace = false
-										hidden = false
-										anim_markup_ordered = false
-										disable_compression = false
-										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Draw_01.fbx"
-										start_frame = -1
-										end_frame = -1
-										framerate = -1.0
-										reverse = false
-									},
-									{
-										_class = "AnimFile"
-										name = "Pistol_2H_Draw_delta"
-										children = 
-										[
-											{
-												_class = "AnimSubtract"
-												anim_name = "Pistol_2H_Draw"
-												frame = 25
-											},
-										]
-										activity_name = ""
-										activity_weight = 1
-										weight_list_name = ""
-										fade_in_time = 0.2
-										fade_out_time = 0.2
-										looping = false
-										delta = false
-										worldSpace = false
-										hidden = false
-										anim_markup_ordered = false
-										disable_compression = false
-										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_2H_Draw_01.fbx"
-										start_frame = -1
-										end_frame = -1
-										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3813,6 +4485,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3841,6 +4514,241 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Attack_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Attack_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Attack_01_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Pistol_RH_Attack_01"
+												frame = 0
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Attack_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Draw_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Draw_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Draw_01_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Pistol_RH_Draw_01"
+												frame = 25
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Draw_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Pose_Standing_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Pose_Standing_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Pose_Moving_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Pose_Moving_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Pose_Crouching_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Pose_Crouching_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Pose_CrouchingLow_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Pose_CrouchingLow_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Reload_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Reload_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Pistol_RH_Reload_01_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Pistol_RH_Reload_01"
+												frame = 0
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Pistol_RH_Reload_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -3868,6 +4776,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3888,6 +4797,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3926,6 +4836,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3964,6 +4875,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -3984,6 +4896,7 @@
 										start_frame = -1
 										end_frame = 4
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4012,6 +4925,7 @@
 										start_frame = -1
 										end_frame = 4
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4032,6 +4946,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4060,6 +4975,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4080,6 +4996,7 @@
 										start_frame = -1
 										end_frame = 50
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4108,6 +5025,7 @@
 										start_frame = -1
 										end_frame = 50
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -4117,6 +5035,56 @@
 								name = "Shotgun"
 								children = 
 								[
+									{
+										_class = "AnimFile"
+										name = "Shotgun_2H_AimMatrix_Standing_01"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Shotgun_2H_AimMatrix_Standing_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Shotgun_2H_AimMatrix_Standing_01_delta"
+										children = 
+										[
+											{
+												_class = "AnimSubtract"
+												anim_name = "Shotgun_2H_AimMatrix_Standing_01"
+												frame = 4
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Shotgun_2H_AimMatrix_Standing_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
 									{
 										_class = "AnimFile"
 										name = "Shotgun_2H_Pose_Standing_01"
@@ -4135,6 +5103,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4155,6 +5124,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4175,6 +5145,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4213,6 +5184,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4251,6 +5223,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4271,6 +5244,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4299,6 +5273,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4319,6 +5294,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4347,6 +5323,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4367,6 +5344,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4395,6 +5373,7 @@
 										start_frame = -1
 										end_frame = -1
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4415,6 +5394,7 @@
 										start_frame = -1
 										end_frame = 13
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4443,6 +5423,7 @@
 										start_frame = -1
 										end_frame = 13
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4471,6 +5452,7 @@
 										start_frame = 12
 										end_frame = 20
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4504,6 +5486,7 @@
 										start_frame = 12
 										end_frame = 20
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4524,6 +5507,7 @@
 										start_frame = 20
 										end_frame = 35
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 									{
@@ -4552,6 +5536,7 @@
 										start_frame = 20
 										end_frame = 35
 										framerate = -1.0
+										take = 0
 										reverse = false
 									},
 								]
@@ -4584,6 +5569,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4604,6 +5590,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4624,6 +5611,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4644,6 +5632,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4664,6 +5653,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4684,6 +5674,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4704,6 +5695,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4724,6 +5716,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4744,6 +5737,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 3016.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4764,6 +5758,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4784,6 +5779,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4804,6 +5800,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = 16.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4824,6 +5821,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4852,6 +5850,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 										]
@@ -4879,6 +5878,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4917,6 +5917,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4955,6 +5956,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4975,6 +5977,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -4995,6 +5998,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5023,6 +6027,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5043,6 +6048,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5071,6 +6077,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 										]
@@ -5098,6 +6105,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5136,6 +6144,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5174,6 +6183,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5194,6 +6204,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5222,6 +6233,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5242,6 +6254,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5270,6 +6283,7 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 											{
@@ -5290,9 +6304,404 @@
 												start_frame = -1
 												end_frame = -1
 												framerate = -1.0
+												take = 0
 												reverse = false
 											},
 										]
+									},
+								]
+							},
+							{
+								_class = "Folder"
+								name = "Melee"
+								children = 
+								[
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Pose_Standing_01"
+										note = "Punch animations were keyframed additively against this pose, will be used to compute delta on-the-fly in animgraph"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Pose_Standing_01.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Idle_Standing_01"
+										note = "This animation is extracted from a 8 second motion capture take that was cleaned up in the SFM and exported from there. Here in ModelDoc, it\'s trimmed down to a specific frame range, and AnimSmoothLoop then cleans up the looping point."
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 10
+												frames_from_end = 10
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Idle_Standing.dmx"
+										start_frame = -1
+										end_frame = 86
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Idle_Standing_02"
+										note = "This animation is extracted from a 8 second motion capture take that was cleaned up in the SFM and exported from there. Here in ModelDoc, it\'s trimmed down to a specific frame range, and AnimSmoothLoop then cleans up the looping point."
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 10
+												frames_from_end = 10
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Idle_Standing.dmx"
+										start_frame = 143
+										end_frame = 169
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Idle_Standing_03"
+										note = "This animation is extracted from a 8 second motion capture take that was cleaned up in the SFM and exported from there. Here in ModelDoc, it\'s trimmed down to a specific frame range, and AnimSmoothLoop then cleans up the looping point."
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 7
+												frames_from_end = 7
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Idle_Standing.dmx"
+										start_frame = 178
+										end_frame = 235
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Idle_Rare"
+										note = "This animation is extracted from a 8 second motion capture take that was cleaned up in the SFM and exported from there. Here in ModelDoc, it\'s trimmed down to a specific frame range."
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												disabled = true
+												frames_from_start = 5
+												frames_from_end = 5
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Idle_Standing.dmx"
+										start_frame = 98
+										end_frame = 133
+										framerate = 35.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Idle_Crouching_01"
+										note = "This animation is extracted from a 8 second motion capture take that was cleaned up in the SFM and exported from there. Here in ModelDoc, it\'s trimmed down to a specific frame range, and AnimSmoothLoop then cleans up the looping point."
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 10
+												frames_from_end = 10
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Idle_Crouching.dmx"
+										start_frame = -1
+										end_frame = 86
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Idle_Crouching_02"
+										note = "This animation is extracted from a 8 second motion capture take that was cleaned up in the SFM and exported from there. Here in ModelDoc, it\'s trimmed down to a specific frame range, and AnimSmoothLoop then cleans up the looping point."
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 12
+												frames_from_end = 12
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Idle_Crouching.dmx"
+										start_frame = 143
+										end_frame = 169
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Idle_Crouching_03"
+										note = "This animation is extracted from a 8 second motion capture take that was cleaned up in the SFM and exported from there. Here in ModelDoc, it\'s trimmed down to a specific frame range, and AnimSmoothLoop then cleans up the looping point."
+										children = 
+										[
+											{
+												_class = "AnimSmoothLoop"
+												frames_from_start = 7
+												frames_from_end = 7
+											},
+										]
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = true
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Idle_Crouching.dmx"
+										start_frame = 178
+										end_frame = 235
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Attack_Left"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Attack_Left.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = 33.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "Melee_Punch_Attack_Right"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/Citizen@Melee_Punch_Attack_Right.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = 33.0
+										take = 0
+										reverse = false
+									},
+								]
+							},
+							{
+								_class = "Folder"
+								name = "HoldAdjustmentLayer"
+								children = 
+								[
+									{
+										_class = "AnimFile"
+										name = "HoldAdjLayer_Center"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/adjustment_layer/Citizen@HoldAdjLayer_Center.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "HoldAdjLayer_Backwards_30"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/adjustment_layer/Citizen@HoldAdjLayer_Backwards_30.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "HoldAdjLayer_Forwards_30"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/adjustment_layer/Citizen@HoldAdjLayer_Forwards_30.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "HoldAdjLayer_Down_30"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/adjustment_layer/Citizen@HoldAdjLayer_Down_30.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
+									},
+									{
+										_class = "AnimFile"
+										name = "HoldAdjLayer_Up_30"
+										activity_name = ""
+										activity_weight = 1
+										weight_list_name = ""
+										fade_in_time = 0.2
+										fade_out_time = 0.2
+										looping = false
+										delta = false
+										worldSpace = false
+										hidden = false
+										anim_markup_ordered = false
+										disable_compression = false
+										source_filename = "models/citizen/animations/weapons/adjustment_layer/Citizen@HoldAdjLayer_Up_30.fbx"
+										start_frame = -1
+										end_frame = -1
+										framerate = -1.0
+										take = 0
+										reverse = false
 									},
 								]
 							},
@@ -5316,6 +6725,7 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 0
 						reverse = false
 					},
 					{
@@ -5344,6 +6754,7 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 0
 						reverse = false
 					},
 					{
@@ -5381,6 +6792,7 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 0
 						reverse = false
 					},
 					{
@@ -5408,6 +6820,7 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 0
 						reverse = false
 					},
 					{
@@ -5440,6 +6853,57 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "IdleLayer_01"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/citizen/animations/Citizen@IdleLayer_01.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "IdleLayer_01_delta"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "IdleLayer_01"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/citizen/animations/Citizen@IdleLayer_01.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
 						reverse = false
 					},
 					{
@@ -5460,7 +6924,92 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = 5.0
+						take = 0
 						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "IdlePose_01"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/citizen/animations/Citizen@IdlePose_01.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+						anim_hold_list = 
+						[
+							{
+								frame = 0
+								frame_count = 30
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "IdlePose_02"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/citizen/animations/Citizen@IdlePose_02.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+						anim_hold_list = 
+						[
+							{
+								frame = 0
+								frame_count = 30
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "IdlePose_03"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/citizen/animations/Citizen@IdlePose_03.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+						anim_hold_list = 
+						[
+							{
+								frame = 0
+								frame_count = 30
+							},
+						]
 					},
 				]
 				default_root_bone_name = ""
@@ -5601,6 +7150,27 @@
 						ignore_Translation = false
 						ignore_rotation = false
 						do_not_discard = false
+					},
+					{
+						_class = "BoneMarkup"
+						target_bone = "aim_matrix_01"
+						ignore_Translation = true
+						ignore_rotation = false
+						do_not_discard = true
+					},
+					{
+						_class = "BoneMarkup"
+						target_bone = "aim_matrix_02"
+						ignore_Translation = true
+						ignore_rotation = false
+						do_not_discard = true
+					},
+					{
+						_class = "BoneMarkup"
+						target_bone = "aim_matrix_03"
+						ignore_Translation = true
+						ignore_rotation = false
+						do_not_discard = true
 					},
 				]
 				bone_cull_type = "None"
@@ -5769,6 +7339,33 @@
 						relative_origin = [ 0.0, 0.0, 0.0 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 0.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "aim_matrix_01"
+						parent_bone = "aim_matrix_01"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "aim_matrix_02"
+						parent_bone = "aim_matrix_02"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "aim_matrix_03"
+						parent_bone = "aim_matrix_03"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
 						ignore_rotation = false
 					},
 				]
@@ -6074,7 +7671,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "pelvis"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 5.0
 								point0 = [ 1.0, 0.0, -2.5 ]
 								point1 = [ 1.0, 0.0, 2.5 ]
@@ -6083,7 +7683,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "spine_0"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 7.0
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 4.0, 0.0, 0.0 ]
@@ -6093,7 +7696,10 @@
 								disabled = true
 								parent_bone = "spine_1"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 7.0
 								center = [ -0.5, 0.0, 0.0 ]
 							},
@@ -6101,7 +7707,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "spine_2"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 7.0
 								point0 = [ 1.0, 0.0, 0.0 ]
 								point1 = [ -2.0, 0.0, 0.0 ]
@@ -6111,7 +7720,10 @@
 								disabled = true
 								parent_bone = "neck_0"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.0
 								point0 = [ 1.0, 0.0, -4.0 ]
 								point1 = [ 1.0, 0.0, 4.0 ]
@@ -6120,7 +7732,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "head"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 6.5
 								point0 = [ 3.0, 1.0, 0.0 ]
 								point1 = [ 9.0, 0.25, 0.0 ]
@@ -6137,7 +7752,10 @@
 								disabled = true
 								parent_bone = "clavicle_L"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 1.55458
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 6.21832, 0.0, 0.0 ]
@@ -6146,7 +7764,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "arm_upper_L"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.4
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 10.0, 0.0, 0.0 ]
@@ -6155,7 +7776,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "arm_lower_L"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.0
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 7.5, -0.2, 0.2 ]
@@ -6164,7 +7788,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "hand_L"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 3.0
 								point0 = [ 2.0, 0.0, 0.4 ]
 								point1 = [ 7.0, 0.0, 2.5 ]
@@ -6174,7 +7801,10 @@
 								disabled = true
 								parent_bone = "clavicle_R"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 1.554579
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 6.21831, 0.0, 0.0 ]
@@ -6183,7 +7813,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "arm_upper_R"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.4
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 10.0, 0.0, 0.0 ]
@@ -6192,7 +7825,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "arm_lower_R"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.0
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 7.5, -0.2, -0.2 ]
@@ -6201,7 +7837,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "hand_R"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 3.0
 								point0 = [ 2.0, 0.0, -0.4 ]
 								point1 = [ 7.0, 0.0, -2.5 ]
@@ -6217,7 +7856,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "leg_upper_L"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 3.0
 								point0 = [ 3.0, 0.0, 0.0 ]
 								point1 = [ 14.0, 0.0, 0.0 ]
@@ -6226,7 +7868,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "leg_lower_L"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.5
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 12.5155, 0.0, 0.0 ]
@@ -6235,7 +7880,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "ankle_L"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.5
 								point0 = [ 1.5, -1.5, 0.0 ]
 								point1 = [ 4.5, 0.5, 0.0 ]
@@ -6244,7 +7892,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "leg_upper_R"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 3.0
 								point0 = [ 3.0, 0.0, 0.0 ]
 								point1 = [ 14.0, 0.0, 0.0 ]
@@ -6253,7 +7904,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "leg_lower_R"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.5
 								point0 = [ 0.0, 0.0, 0.0 ]
 								point1 = [ 12.5155, 0.0, 0.0 ]
@@ -6262,7 +7916,10 @@
 								_class = "PhysicsShapeCapsule"
 								parent_bone = "ankle_R"
 								surface_prop = "flesh"
-								collision_prop = "default"
+								collision_group = ""
+								collision_interact_as = ""
+								collision_interact_with = ""
+								collision_interact_exclude = ""
 								radius = 2.5
 								point0 = [ 1.5, -1.5, 0.0 ]
 								point1 = [ 4.5, 0.5, 0.0 ]
@@ -7139,19 +8796,19 @@
 								weights = 
 								[
 									{
+										bone = "foot_L_IK_target"
+										weight = 0.0
+									},
+									{
 										bone = "foot_R_IK_target"
 										weight = 0.0
 									},
 									{
-										bone = "hand_L_IK_target"
-										weight = 1.0
-									},
-									{
-										bone = "hand_R_IK_target"
-										weight = 1.0
-									},
-									{
 										bone = "pelvis"
+										weight = 1.0
+									},
+									{
+										bone = "root_IK"
 										weight = 1.0
 									},
 								]
@@ -7480,6 +9137,196 @@
 									{
 										bone = "spine_2"
 										weight = 0.424837
+									},
+								]
+								master_morph_weight = -1.0
+								morph_weights = [  ]
+							},
+							{
+								_class = "WeightList"
+								name = "Weapon_2H_Move_weaker"
+								default_weight = 0.0
+								weights = 
+								[
+									{
+										bone = "arm_elbow_helper_L"
+										weight = 0.0
+									},
+									{
+										bone = "arm_elbow_helper_R"
+										weight = 0.0
+									},
+									{
+										bone = "arm_lower_L"
+										weight = 0.738462
+									},
+									{
+										bone = "arm_lower_L_twist"
+										weight = 0.0
+									},
+									{
+										bone = "arm_lower_R"
+										weight = 0.717949
+									},
+									{
+										bone = "arm_lower_R_twist"
+										weight = 0.0
+									},
+									{
+										bone = "arm_upper_L"
+										weight = 0.748718
+									},
+									{
+										bone = "arm_upper_L_twist"
+										weight = 0.0
+									},
+									{
+										bone = "arm_upper_R"
+										weight = 0.748718
+									},
+									{
+										bone = "arm_upper_R_twist"
+										weight = 0.0
+									},
+									{
+										bone = "clavicle_L"
+										weight = 0.738462
+									},
+									{
+										bone = "clavicle_R"
+										weight = 0.738462
+									},
+									{
+										bone = "eye_L"
+										weight = 0.0
+									},
+									{
+										bone = "eye_R"
+										weight = 0.0
+									},
+									{
+										bone = "face_lid_lower_L"
+										weight = 0.0
+									},
+									{
+										bone = "face_lid_lower_R"
+										weight = 0.0
+									},
+									{
+										bone = "face_lid_upper_L"
+										weight = 0.0
+									},
+									{
+										bone = "face_lid_upper_R"
+										weight = 0.0
+									},
+									{
+										bone = "finger_index_meta_L"
+										weight = 1.0
+									},
+									{
+										bone = "finger_index_meta_R"
+										weight = 1.0
+									},
+									{
+										bone = "finger_middle_meta_L"
+										weight = 1.0
+									},
+									{
+										bone = "finger_middle_meta_R"
+										weight = 1.0
+									},
+									{
+										bone = "finger_ring_meta_L"
+										weight = 1.0
+									},
+									{
+										bone = "finger_ring_meta_R"
+										weight = 1.0
+									},
+									{
+										bone = "finger_thumb_0_L"
+										weight = 1.0
+									},
+									{
+										bone = "finger_thumb_0_R"
+										weight = 1.0
+									},
+									{
+										bone = "foot_L_IK_target"
+										weight = 0.0
+									},
+									{
+										bone = "foot_R_IK_target"
+										weight = 0.0
+									},
+									{
+										bone = "hand_L"
+										weight = 0.5
+									},
+									{
+										bone = "hand_L_IK_target"
+										weight = 1.0
+									},
+									{
+										bone = "hand_L_to_R_ikrule"
+										weight = 1.0
+									},
+									{
+										bone = "hand_R"
+										weight = 0.5
+									},
+									{
+										bone = "hand_R_IK_target"
+										weight = 1.0
+									},
+									{
+										bone = "hand_R_to_L_ikrule"
+										weight = 1.0
+									},
+									{
+										bone = "head"
+										weight = 0.85641
+									},
+									{
+										bone = "hold_L"
+										weight = 1.0
+									},
+									{
+										bone = "hold_R"
+										weight = 1.0
+									},
+									{
+										bone = "leg_upper_L"
+										weight = 0.0
+									},
+									{
+										bone = "leg_upper_R"
+										weight = 0.0
+									},
+									{
+										bone = "neck_0"
+										weight = 0.641026
+									},
+									{
+										bone = "pelvis"
+										weight = 0.0
+									},
+									{
+										bone = "root_IK"
+										weight = 0.0
+									},
+									{
+										bone = "spine_0"
+										weight = 0.117647
+									},
+									{
+										bone = "spine_1"
+										weight = 0.205128
+									},
+									{
+										bone = "spine_2"
+										weight = 0.292308
 									},
 								]
 								master_morph_weight = -1.0
@@ -7865,18 +9712,6 @@
 								weights = 
 								[
 									{
-										bone = "arm_elbow_helper_R"
-										weight = 1.0
-									},
-									{
-										bone = "arm_lower_R_twist"
-										weight = 1.0
-									},
-									{
-										bone = "arm_upper_R_twist"
-										weight = 1.0
-									},
-									{
 										bone = "clavicle_L"
 										weight = 0.0
 									},
@@ -8060,7 +9895,7 @@
 									},
 									{
 										bone = "hand_R"
-										weight = 0.727273
+										weight = 1.0
 									},
 									{
 										bone = "hand_R_IK_target"
@@ -8068,7 +9903,7 @@
 									},
 									{
 										bone = "head"
-										weight = 0.588235
+										weight = 0.5
 									},
 									{
 										bone = "hold_R"
@@ -8084,7 +9919,7 @@
 									},
 									{
 										bone = "neck_0"
-										weight = 0.653595
+										weight = 0.5
 									},
 									{
 										bone = "pelvis"
@@ -8096,15 +9931,15 @@
 									},
 									{
 										bone = "spine_0"
-										weight = 0.117647
+										weight = 0.0
 									},
 									{
 										bone = "spine_1"
-										weight = 0.287582
+										weight = 0.0
 									},
 									{
 										bone = "spine_2"
-										weight = 0.424837
+										weight = 0.0
 									},
 								]
 								master_morph_weight = -1.0
@@ -8374,7 +10209,7 @@
 									},
 									{
 										bone = "hand_L"
-										weight = 0.758865
+										weight = 1.0
 									},
 									{
 										bone = "hand_L_IK_target"
@@ -8390,7 +10225,7 @@
 									},
 									{
 										bone = "head"
-										weight = 0.588235
+										weight = 0.5
 									},
 									{
 										bone = "hold_L"
@@ -8406,7 +10241,7 @@
 									},
 									{
 										bone = "neck_0"
-										weight = 0.653595
+										weight = 0.5
 									},
 									{
 										bone = "pelvis"
@@ -8418,15 +10253,15 @@
 									},
 									{
 										bone = "spine_0"
-										weight = 0.117647
+										weight = 0.0
 									},
 									{
 										bone = "spine_1"
-										weight = 0.287582
+										weight = 0.0
 									},
 									{
 										bone = "spine_2"
-										weight = 0.424837
+										weight = 0.0
 									},
 								]
 								master_morph_weight = -1.0
@@ -8552,6 +10387,24 @@
 							},
 						]
 						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "Everything"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "pelvis"
+								weight = 1.0
+							},
+							{
+								bone = "root_IK"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
 						morph_weights = [  ]
 					},
 					{
@@ -8818,11 +10671,151 @@
 					},
 					{
 						_class = "WeightList"
+						name = "Only_Hands"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "hand_L"
+								weight = 1.0
+							},
+							{
+								bone = "hand_R"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
 						name = "Only_Morphs"
 						default_weight = 0.0
 						weights = [  ]
 						master_morph_weight = 1.0
 						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "Only_Morphs_Mouth"
+						default_weight = 0.0
+						weights = [  ]
+						master_morph_weight = -1.0
+						morph_weights = 
+						[
+							{
+								morph = "browlowererL"
+								weight = 0.0
+							},
+							{
+								morph = "browlowererR"
+								weight = 0.0
+							},
+							{
+								morph = "cheekinflateL"
+								weight = 1.0
+							},
+							{
+								morph = "cheekinflateR"
+								weight = 1.0
+							},
+							{
+								morph = "eyelidbulgelower"
+								weight = 0.0
+							},
+							{
+								morph = "eyelidbulgeupper"
+								weight = 0.0
+							},
+							{
+								morph = "innerbrowraiserL"
+								weight = 0.0
+							},
+							{
+								morph = "innerbrowraiserR"
+								weight = 0.0
+							},
+							{
+								morph = "jawsidewaysL"
+								weight = 1.0
+							},
+							{
+								morph = "jawsidewaysR"
+								weight = 1.0
+							},
+							{
+								morph = "jawsuck"
+								weight = 1.0
+							},
+							{
+								morph = "jawthrust"
+								weight = 1.0
+							},
+							{
+								morph = "lipcornerdepressorL"
+								weight = 1.0
+							},
+							{
+								morph = "lipcornerdepressorR"
+								weight = 1.0
+							},
+							{
+								morph = "lipcornerpullerL"
+								weight = 1.0
+							},
+							{
+								morph = "lipcornerpullerR"
+								weight = 1.0
+							},
+							{
+								morph = "lippuckerer"
+								weight = 1.0
+							},
+							{
+								morph = "nosewrinklerL"
+								weight = 0.004566
+							},
+							{
+								morph = "nosewrinklerR"
+								weight = 0.0
+							},
+							{
+								morph = "nostrildilator"
+								weight = 0.0
+							},
+							{
+								morph = "openjawL"
+								weight = 1.0
+							},
+							{
+								morph = "openjawR"
+								weight = 1.0
+							},
+							{
+								morph = "openmouthL"
+								weight = 1.0
+							},
+							{
+								morph = "openmouthR"
+								weight = 1.0
+							},
+							{
+								morph = "outerbrowraiserL"
+								weight = 0.0
+							},
+							{
+								morph = "outerbrowraiserR"
+								weight = 0.0
+							},
+							{
+								morph = "upperlipraiserL"
+								weight = 1.0
+							},
+							{
+								morph = "upperlipraiserR"
+								weight = 1.0
+							},
+						]
 					},
 					{
 						_class = "WeightList"
@@ -8884,34 +10877,178 @@
 					},
 					{
 						_class = "WeightList"
-						name = "Remove_Head"
+						name = "ReduceBonesBy25Percent"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "pelvis"
+								weight = 0.25
+							},
+							{
+								bone = "root_IK"
+								weight = 0.25
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "ReduceBonesBy50Percent"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "pelvis"
+								weight = 0.5
+							},
+							{
+								bone = "root_IK"
+								weight = 0.5
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "ReduceBonesBy75Percent"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "pelvis"
+								weight = 0.5
+							},
+							{
+								bone = "root_IK"
+								weight = 0.5
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "Remove_Arms"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "clavicle_L"
+								weight = 0.0
+							},
+							{
+								bone = "clavicle_R"
+								weight = 0.0
+							},
+							{
+								bone = "hand_L_IK_target"
+								weight = 0.0
+							},
+							{
+								bone = "hand_R_IK_target"
+								weight = 0.0
+							},
+							{
+								bone = "pelvis"
+								weight = 1.0
+							},
+							{
+								bone = "root_IK"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "Remove_Face"
 						default_weight = 0.0
 						weights = 
 						[
 							{
 								bone = "eye_L"
-								weight = 1.0
+								weight = 0.0
 							},
 							{
 								bone = "eye_R"
-								weight = 1.0
+								weight = 0.0
 							},
 							{
 								bone = "face_lid_lower_L"
-								weight = 1.0
+								weight = 0.0
 							},
 							{
 								bone = "face_lid_lower_R"
-								weight = 1.0
+								weight = 0.0
 							},
 							{
 								bone = "face_lid_upper_L"
-								weight = 1.0
+								weight = 0.0
 							},
 							{
 								bone = "face_lid_upper_R"
+								weight = 0.0
+							},
+							{
+								bone = "neck_0"
 								weight = 1.0
 							},
+							{
+								bone = "pelvis"
+								weight = 1.0
+							},
+							{
+								bone = "root_IK"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "Remove_Legs"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "foot_L_IK_target"
+								weight = 0.0
+							},
+							{
+								bone = "foot_R_IK_target"
+								weight = 0.0
+							},
+							{
+								bone = "leg_upper_L"
+								weight = 0.0
+							},
+							{
+								bone = "leg_upper_R"
+								weight = 0.0
+							},
+							{
+								bone = "pelvis"
+								weight = 1.0
+							},
+							{
+								bone = "root_IK"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "Remove_Head"
+						default_weight = 0.0
+						weights = 
+						[
 							{
 								bone = "neck_0"
 								weight = 0.0
@@ -9007,60 +11144,6 @@
 							{
 								bone = "spine_2"
 								weight = 0.163866
-							},
-						]
-						master_morph_weight = -1.0
-						morph_weights = [  ]
-					},
-					{
-						_class = "WeightList"
-						name = "UpperBodyAdditive"
-						default_weight = 0.0
-						weights = 
-						[
-							{
-								bone = "eye_L"
-								weight = 0.0
-							},
-							{
-								bone = "eye_R"
-								weight = 0.0
-							},
-							{
-								bone = "face_lid_lower_L"
-								weight = 0.0
-							},
-							{
-								bone = "face_lid_lower_R"
-								weight = 0.0
-							},
-							{
-								bone = "face_lid_upper_L"
-								weight = 0.0
-							},
-							{
-								bone = "face_lid_upper_R"
-								weight = 0.0
-							},
-							{
-								bone = "hand_L_to_R_ikrule"
-								weight = 0.0
-							},
-							{
-								bone = "hand_R_to_L_ikrule"
-								weight = 0.0
-							},
-							{
-								bone = "leg_upper_L"
-								weight = 0.0
-							},
-							{
-								bone = "leg_upper_R"
-								weight = 0.0
-							},
-							{
-								bone = "pelvis"
-								weight = 1.0
 							},
 						]
 						master_morph_weight = -1.0
@@ -9278,6 +11361,60 @@
 					},
 					{
 						_class = "WeightList"
+						name = "UpperBodyAdditive"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "eye_L"
+								weight = 0.0
+							},
+							{
+								bone = "eye_R"
+								weight = 0.0
+							},
+							{
+								bone = "face_lid_lower_L"
+								weight = 0.0
+							},
+							{
+								bone = "face_lid_lower_R"
+								weight = 0.0
+							},
+							{
+								bone = "face_lid_upper_L"
+								weight = 0.0
+							},
+							{
+								bone = "face_lid_upper_R"
+								weight = 0.0
+							},
+							{
+								bone = "hand_L_to_R_ikrule"
+								weight = 0.0
+							},
+							{
+								bone = "hand_R_to_L_ikrule"
+								weight = 0.0
+							},
+							{
+								bone = "leg_upper_L"
+								weight = 0.0
+							},
+							{
+								bone = "leg_upper_R"
+								weight = 0.0
+							},
+							{
+								bone = "pelvis"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
 						name = "VR_Override"
 						default_weight = 0.0
 						weights = 
@@ -9339,43 +11476,7 @@
 								weight = 0.0
 							},
 							{
-								bone = "finger_index_meta_L"
-								weight = 0.0
-							},
-							{
-								bone = "finger_index_meta_R"
-								weight = 0.0
-							},
-							{
-								bone = "finger_middle_meta_L"
-								weight = 0.0
-							},
-							{
-								bone = "finger_middle_meta_R"
-								weight = 0.0
-							},
-							{
-								bone = "finger_ring_meta_L"
-								weight = 0.0
-							},
-							{
-								bone = "finger_ring_meta_R"
-								weight = 0.0
-							},
-							{
-								bone = "finger_thumb_0_L"
-								weight = 0.0
-							},
-							{
-								bone = "finger_thumb_0_R"
-								weight = 0.0
-							},
-							{
 								bone = "hand_L_IK_target"
-								weight = 0.0
-							},
-							{
-								bone = "hand_L_to_R_ikrule"
 								weight = 0.0
 							},
 							{
@@ -9388,11 +11489,7 @@
 							},
 							{
 								bone = "head"
-								weight = 1.0
-							},
-							{
-								bone = "hold_R"
-								weight = 0.0
+								weight = 0.659574
 							},
 							{
 								bone = "neck_0"
@@ -9444,6 +11541,7 @@
 									},
 									{
 										_class = "GenericGameData"
+										disabled = true
 										game_class = "ao_proxy_capsule"
 										game_keys = 
 										{
@@ -9455,6 +11553,7 @@
 									},
 									{
 										_class = "GenericGameData"
+										disabled = true
 										game_class = "ao_proxy_capsule"
 										game_keys = 
 										{
@@ -9471,7 +11570,7 @@
 										{
 											bonename = "spine_2"
 											radius = 6.5
-											point0 = [ -1.0, 0.0, 0.0 ]
+											point0 = [ -11.7587, 0.0, 0.0 ]
 											point1 = [ 3.0, 0.0, 0.0 ]
 										}
 									},
@@ -9501,6 +11600,7 @@
 											{
 												_class = "GenericGameData"
 												name = "thumbL"
+												disabled = true
 												game_class = "ao_proxy_capsule"
 												game_keys = 
 												{
@@ -9537,6 +11637,7 @@
 											{
 												_class = "GenericGameData"
 												name = "indexL"
+												disabled = true
 												game_class = "ao_proxy_capsule"
 												game_keys = 
 												{
@@ -9589,7 +11690,7 @@
 												game_keys = 
 												{
 													bonename = "finger_middle_meta_L"
-													radius = 1.4
+													radius = 1.86776
 													point0 = [ -1.0, 0.0, 0.0 ]
 													point1 = [ 2.2, 0.0, 0.0 ]
 												}
@@ -9633,6 +11734,7 @@
 											{
 												_class = "GenericGameData"
 												name = "ringL"
+												disabled = true
 												game_class = "ao_proxy_capsule"
 												game_keys = 
 												{
@@ -9681,6 +11783,7 @@
 											{
 												_class = "GenericGameData"
 												name = "thumbR"
+												disabled = true
 												game_class = "ao_proxy_capsule"
 												game_keys = 
 												{
@@ -9717,6 +11820,7 @@
 											{
 												_class = "GenericGameData"
 												name = "indexR"
+												disabled = true
 												game_class = "ao_proxy_capsule"
 												game_keys = 
 												{
@@ -9769,7 +11873,7 @@
 												game_keys = 
 												{
 													bonename = "finger_middle_meta_R"
-													radius = 1.4
+													radius = 1.90478
 													point0 = [ -1.0, 0.0, 0.0 ]
 													point1 = [ 2.2, 0.0, 0.0 ]
 												}
@@ -9813,6 +11917,7 @@
 											{
 												_class = "GenericGameData"
 												name = "ringR"
+												disabled = true
 												game_class = "ao_proxy_capsule"
 												game_keys = 
 												{
@@ -9961,6 +12066,7 @@
 									},
 									{
 										_class = "GenericGameData"
+										disabled = true
 										game_class = "ao_proxy_capsule"
 										game_keys = 
 										{
@@ -9972,6 +12078,7 @@
 									},
 									{
 										_class = "GenericGameData"
+										disabled = true
 										game_class = "ao_proxy_capsule"
 										game_keys = 
 										{
@@ -9987,8 +12094,8 @@
 										game_keys = 
 										{
 											bonename = "ball_R"
-											dimensions = [ 1.05, 3.22, 4.85 ]
-											offset_origin = [ 0.55, 0.098, 0.28 ]
+											dimensions = [ 1.27102, 6.08424, 4.85 ]
+											offset_origin = [ -0.882109, 0.208512, 0.28 ]
 											offset_angles = [ 0.0, 90.0, -0.0 ]
 										}
 									},
@@ -10016,6 +12123,7 @@
 									},
 									{
 										_class = "GenericGameData"
+										disabled = true
 										game_class = "ao_proxy_capsule"
 										game_keys = 
 										{
@@ -10027,6 +12135,7 @@
 									},
 									{
 										_class = "GenericGameData"
+										disabled = true
 										game_class = "ao_proxy_capsule"
 										game_keys = 
 										{
@@ -10042,8 +12151,8 @@
 										game_keys = 
 										{
 											bonename = "ball_L"
-											dimensions = [ 1.05, 3.22, 4.85 ]
-											offset_origin = [ 0.55, 0.098, -0.28 ]
+											dimensions = [ 1.41039, 6.93472, 4.09806 ]
+											offset_origin = [ -1.30734, 0.278196, 0.095972 ]
 											offset_angles = [ 0.0, 90.0, -0.0 ]
 										}
 									},
@@ -10125,6 +12234,25 @@
 										{
 											name = "neck_0"
 											weight = 0.35
+										},
+									]
+								}
+							},
+							{
+								_class = "LookAtChain"
+								name = "LookChain_LessNeck"
+								lookat_chain = 
+								{
+									name = ""
+									bones = 
+									[
+										{
+											name = "head"
+											weight = 0.6
+										},
+										{
+											name = "neck_0"
+											weight = 0.15
 										},
 									]
 								}

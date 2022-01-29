@@ -1,0 +1,31 @@
+Vitals
+{
+	position: absolute;
+	background-color: rgba( black, 0.5 );
+	right: 100px;
+	bottom: 48px;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	height: 80px;
+	padding: 0 20px;
+	border-radius: 25px;
+	align-items: center;
+	
+	label {
+		text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.667);
+
+		&.danger {
+			position: absolute;
+			right: -11px;
+			bottom: 0px;
+			font-size: 40px;
+			font-weight: bold;
+			color: rgb(158, 0, 0);
+			height: 80px;
+			padding: 0 20px;
+			border-radius: 25px;
+			align-items: center;
+		}
+	}
+}

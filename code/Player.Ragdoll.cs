@@ -1,85 +1,88 @@
 ﻿using Sandbox;
 
-partial class SandboxPlayer
+namespace LT 
 {
-	[ClientRpc]
-	private void BecomeRagdollOnClient( Vector3 velocity, DamageFlags damageFlags, Vector3 forcePos, Vector3 force, int bone )
+	partial class LTPlayer
 	{
-		var ent = new ModelEntity();
-		ent.Position = Position;
-		ent.Rotation = Rotation;
-		ent.Scale = Scale;
-		ent.MoveType = MoveType.Physics;
-		ent.UsePhysicsCollision = true;
-		ent.EnableAllCollisions = true;
-		ent.CollisionGroup = CollisionGroup.Debris;
-		ent.SetModel( GetModelName() );
-		ent.CopyBonesFrom( this );
-		ent.CopyBodyGroups( this );
-		ent.CopyMaterialGroup( this );
-		ent.TakeDecalsFrom( this );
-		ent.EnableHitboxes = true;
-		ent.EnableAllCollisions = true;
-		ent.SurroundingBoundsMode = SurroundingBoundsType.Physics;
-		// ent.RenderColorAndAlpha = RenderColorAndAlpha;
-		ent.PhysicsGroup.Velocity = velocity;
-
-		if ( Local.Pawn == this )
+		[ClientRpc]
+		private void BecomeRagdollOnClient( Vector3 velocity, DamageFlags damageFlags, Vector3 forcePos, Vector3 force, int bone )
 		{
-			//ent.EnableDrawing = false; wtf
-		}
+			var ent = new ModelEntity();
+			ent.Position = Position;
+			ent.Rotation = Rotation;
+			ent.Scale = Scale;
+			ent.MoveType = MoveType.Physics;
+			ent.UsePhysicsCollision = true;
+			ent.EnableAllCollisions = true;
+			ent.CollisionGroup = CollisionGroup.Debris;
+			ent.SetModel( GetModelName() );
+			ent.CopyBonesFrom( this );
+			ent.CopyBodyGroups( this );
+			ent.CopyMaterialGroup( this );
+			ent.TakeDecalsFrom( this );
+			ent.EnableHitboxes = true;
+			ent.EnableAllCollisions = true;
+			ent.SurroundingBoundsMode = SurroundingBoundsType.Physics;
+			// ent.RenderColorAndAlpha = RenderColorAndAlpha;
+			ent.PhysicsGroup.Velocity = velocity;
 
-		ent.SetInteractsAs( CollisionLayer.Debris );
-		ent.SetInteractsWith( CollisionLayer.WORLD_GEOMETRY );
-		ent.SetInteractsExclude( CollisionLayer.Player | CollisionLayer.Debris );
-
-		foreach ( var child in Children )
-		{
-			if ( child is ModelEntity e )
+			if ( Local.Pawn == this )
 			{
-				var model = e.GetModelName();
-				if ( model != null && !model.Contains( "clothes" ) )
-					continue;
+				//ent.EnableDrawing = false; wtf
+			}
 
-				var clothing = new ModelEntity();
-				clothing.SetModel( model );
-				clothing.SetParent( ent, true );
-				// clothing.RenderColorAndAlpha = e.RenderColorAndAlpha;
+			ent.SetInteractsAs( CollisionLayer.Debris );
+			ent.SetInteractsWith( CollisionLayer.WORLD_GEOMETRY );
+			ent.SetInteractsExclude( CollisionLayer.Player | CollisionLayer.Debris );
 
-				if ( Local.Pawn == this )
+			foreach ( var child in Children )
+			{
+				if ( child is ModelEntity e )
 				{
-					//	clothing.EnableDrawing = false; wtf
+					var model = e.GetModelName();
+					if ( model != null && !model.Contains( "clothes" ) )
+						continue;
+
+					var clothing = new ModelEntity();
+					clothing.SetModel( model );
+					clothing.SetParent( ent, true );
+					// clothing.RenderColorAndAlpha = e.RenderColorAndAlpha;
+
+					if ( Local.Pawn == this )
+					{
+						//	clothing.EnableDrawing = false; wtf
+					}
 				}
 			}
-		}
 
-		if ( damageFlags.HasFlag( DamageFlags.Bullet ) ||
-			 damageFlags.HasFlag( DamageFlags.PhysicsImpact ) )
-		{
-			PhysicsBody body = bone > 0 ? ent.GetBonePhysicsBody( bone ) : null;
-
-			if ( body != null )
+			if ( damageFlags.HasFlag( DamageFlags.Bullet ) ||
+				damageFlags.HasFlag( DamageFlags.PhysicsImpact ) )
 			{
-				body.ApplyImpulseAt( forcePos, force * body.Mass );
+				PhysicsBody body = bone > 0 ? ent.GetBonePhysicsBody( bone ) : null;
+
+				if ( body != null )
+				{
+					body.ApplyImpulseAt( forcePos, force * body.Mass );
+				}
+				else
+				{
+					ent.PhysicsGroup.ApplyImpulse( force );
+				}
 			}
-			else
+
+			if ( damageFlags.HasFlag( DamageFlags.Blast ) )
 			{
-				ent.PhysicsGroup.ApplyImpulse( force );
+				if ( ent.PhysicsGroup != null )
+				{
+					ent.PhysicsGroup.AddVelocity( (Position - (forcePos + Vector3.Down * 100.0f)).Normal * (force.Length * 0.2f) );
+					var angularDir = (Rotation.FromYaw( 90 ) * force.WithZ( 0 ).Normal).Normal;
+					ent.PhysicsGroup.AddAngularVelocity( angularDir * (force.Length * 0.02f) );
+				}
 			}
+
+			Corpse = ent;
+
+			ent.DeleteAsync( 10.0f );
 		}
-
-		if ( damageFlags.HasFlag( DamageFlags.Blast ) )
-		{
-			if ( ent.PhysicsGroup != null )
-			{
-				ent.PhysicsGroup.AddVelocity( (Position - (forcePos + Vector3.Down * 100.0f)).Normal * (force.Length * 0.2f) );
-				var angularDir = (Rotation.FromYaw( 90 ) * force.WithZ( 0 ).Normal).Normal;
-				ent.PhysicsGroup.AddAngularVelocity( angularDir * (force.Length * 0.02f) );
-			}
-		}
-
-		Corpse = ent;
-
-		ent.DeleteAsync( 10.0f );
 	}
 }
