@@ -29,12 +29,14 @@ partial class SandboxPlayer : Player
 		if (Randomizer <= 2.0f) 
 		{
 			SetModel( "models/citizen/linry.vmdl" );
+			MainCamera = new ThirdPersonCamera();
+			LastCamera = new ThirdPersonCamera();
 		}
 
 		if (Randomizer > 2.0f) 
 		{
 			SetModel("models/citizen/citizen.vmdl");
-			Dress();
+			// Dress();
 		}
 
 		Controller = new WalkController();

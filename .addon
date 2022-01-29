@@ -1,3 +1,14 @@
 {
-    "sharedassets": "*.*",
+  "SharedAssets": "*.*",
+  "Title": "Linry Tag",
+  "Type": "game",
+  "Org": "ltt",
+  "Ident": "linry_tag",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": null,
+  "HasCode": true,
+  "CodePath": "code",
+  "RootNamespace": "Sandbox"
 }
