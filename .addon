@@ -1,5 +1,4 @@
 {
-  "SharedAssets": "*.*",
   "Title": "Linry Tag",
   "Type": "game",
   "Org": "ltt",
@@ -7,8 +6,22 @@
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
-  "ResourcePaths": null,
+  "ResourcePaths": [
+    "/ui/*"
+  ],
   "HasCode": true,
   "CodePath": "code",
-  "RootNamespace": "Sandbox"
+  "RootNamespace": "LT",
+  "Metadata": {
+    "MaxPlayers": 32,
+    "MinPlayers": 0,
+    "GameNetworkType": 0,
+    "MapSelect": 0,
+    "MapList": [
+      "facepunch.construct"
+    ],
+    "RankType": 0,
+    "PerMapRanking": false,
+    "LeaderboardType": 0
+  }
 }
