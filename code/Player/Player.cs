@@ -15,7 +15,7 @@ namespace LT
 
 			if (Rand.Int(0, 1) == 1)
 			{
-				SetModel("models/citizen/linry.vmdl");
+				SetModel("models/linry.vmdl");
 			}
 
 			CameraMode = new ThirdPersonCamera();
