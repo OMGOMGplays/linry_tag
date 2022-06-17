@@ -8,9 +8,16 @@ namespace LT
 	{
 		public LTGame() 
 		{
-			if (IsServer) 
+			if ( IsClient )
+				new LTHud();
+		}
+
+		[Event.Hotload]
+		public void UpdateGame()
+		{
+			if( IsClient )
 			{
-				_ = new LTHud();
+				new LTHud();
 			}
 		}
 

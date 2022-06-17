@@ -5,13 +5,23 @@ using Sandbox.UI.Construct;
 namespace LT 
 {
 	[Library]
-	public partial class LTHud : HudEntity<RootPanel> 
+	public partial class LTHud : RootPanel
 	{
+		public static LTHud Current;
+
 		public LTHud() 
 		{
-			if (!IsClient) return;
+			//Delete and nullify the hud if it already exists
+			//for a new one to be replacing it
+			if ( Current != null )
+			{
+				Current?.Delete();
+				Current = null;
+			}
 
-			RootPanel.AddChild<LTChatBox>();
+			Current = this;
+
+			AddChild<LTChatBox>();
 		}
 	}
 }
