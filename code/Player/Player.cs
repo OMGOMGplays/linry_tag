@@ -28,6 +28,8 @@ namespace LT
 		{
 			base.Respawn();
 
+			SetModel( "models/citizen/citizen.vmdl" );
+
 			//If we're going to do teams, this is not the way to do it -Rifter
 			/*if (Rand.Int(0, 1) == 0) 
 			{
@@ -40,7 +42,7 @@ namespace LT
 				SetModel("models/linry.vmdl");
 				Clothing.ClearEntities(); // Clear entities just in case the player spawned as a normal Terry, then became Linry - Lokiv
 			}*/
-			
+
 			CameraMode = new ThirdPersonCamera();
 			Animator = new StandardPlayerAnimator();
 			Controller = new WalkController();

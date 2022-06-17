@@ -14,7 +14,7 @@
   "RootNamespace": "LT",
   "Metadata": {
     "MaxPlayers": 32,
-    "MinPlayers": 0,
+    "MinPlayers": 1,
     "GameNetworkType": 0,
     "MapSelect": 0,
     "MapList": [
